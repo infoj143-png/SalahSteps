@@ -1,9 +1,12 @@
 
-> kids-salah@0.1.0 start
-> next start
+> kids-salah@0.1.0 dev
+> next dev
 
-▲ Next.js 16.3.2
+▲ Next.js 16.3.2 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 193ms
-✓ Running next.config.ts took 39ms
+✓ Ready in 560ms
+✓ Running next.config.ts took 49ms
+
+ HEAD / 200 in 3.5s (next.js: 3.1s, application-code: 390ms)
+ GET /2-rakat-salah 200 in 899ms (next.js: 750ms, application-code: 148ms)
