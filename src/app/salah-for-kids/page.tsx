@@ -1,8 +1,10 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Section } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { StepCard } from "@/components/learning/StepCard";
+import { InteractiveLessonViewer } from "@/components/learning/InteractiveLessonViewer";
+import { fullSalahOverviewLesson } from "@/data/salahOverviewLesson";
 import { constructMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = constructMetadata({
@@ -18,46 +20,88 @@ export default function SalahForKidsPage() {
       <Section className="py-8 bg-teal-50/50">
         <Breadcrumbs items={[{ label: "Salah for Kids" }]} />
         <div className="max-w-3xl">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Salah for Kids — Step-by-Step Guide
+          <span className="text-xs font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
+            Interactive Prayer Hub
+          </span>
+          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+            Salah for Kids — Complete Guide
           </h1>
           <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
-            Welcome to the interactive Salah guide. Here children and parents can learn each movement and recitation step by step with clear explanations.
+            Welcome to the SalahSteps interactive prayer guide. Learn the foundational movements and recitations of prayer, then choose your prayer length below.
           </p>
         </div>
       </Section>
 
       <Section>
-        <div className="max-w-4xl mx-auto">
-          <StepCard
-            stepNumber={1}
-            title="Intention (Niyyah) & Standing (Qiyam)"
-            description="Stand facing the Qiblah with a clean heart and make the intention in your mind for the prayer you are about to perform."
-            illustrationPlaceholder="Child standing peacefully facing Qiblah"
-            tips={[
-              "Remind your child that Niyyah is from the heart and does not need to be spoken loudly.",
-              "Ensure feet are pointing forward comfortably.",
-            ]}
-          />
-
-          <StepCard
-            stepNumber={2}
-            title="Takbirat-ul-Ihram"
-            description="Raise your hands to ear level (or shoulder level) and say Takbir to begin the prayer."
-            arabicText="اللَّهُ أَكْبَرُ"
-            transliteration="Allahu Akbar"
-            translation="Allah is the Greatest"
-            illustrationPlaceholder="Child raising hands to ears"
-            tips={["Keep fingers relaxed, facing forward."]}
-          />
-
-          <div className="p-6 bg-amber-50 rounded-2xl border border-amber-200 text-center my-8">
-            <h2 className="text-lg font-bold text-amber-900 mb-2">
-              📌 Educational Placeholder Notice
+        <div className="max-w-4xl mx-auto space-y-10">
+          {/* Specific Rakat Prayer Guides Cards */}
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200/90 shadow-2xs">
+            <h2 className="text-xl font-extrabold text-slate-900 mb-2">
+              Select Prayer Length Guide
             </h2>
-            <p className="text-sm text-amber-800 leading-relaxed max-w-2xl mx-auto">
-              This guide provides a structured framework for learning. Full verified step-by-step recitations and positions are reviewed by Islamic educators.
+            <p className="text-slate-600 text-sm mb-6">
+              Choose the specific prayer length you want to learn step by step:
             </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <Link
+                href="/2-rakat-salah"
+                className="p-5 rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 border border-emerald-200/80 hover:shadow-md transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold mb-3 group-hover:scale-105 transition-transform">
+                  1️⃣
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-base group-hover:text-emerald-700 transition-colors">
+                  2 Rakat Salah →
+                </h3>
+                <p className="text-xs text-slate-600 mt-1">
+                  For Fajr, Sunnah, and Nafl prayers.
+                </p>
+              </Link>
+
+              <Link
+                href="/3-rakat-salah"
+                className="p-5 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/80 hover:shadow-md transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center font-bold mb-3 group-hover:scale-105 transition-transform">
+                  2️⃣
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-base group-hover:text-amber-800 transition-colors">
+                  3 Rakat Salah →
+                </h3>
+                <p className="text-xs text-slate-600 mt-1">
+                  For Maghrib and Witr prayers.
+                </p>
+              </Link>
+
+              <Link
+                href="/4-rakat-salah"
+                className="p-5 rounded-2xl bg-gradient-to-br from-sky-50 to-indigo-50 border border-sky-200/80 hover:shadow-md transition-all group"
+              >
+                <div className="w-10 h-10 rounded-xl bg-sky-600 text-white flex items-center justify-center font-bold mb-3 group-hover:scale-105 transition-transform">
+                  3️⃣
+                </div>
+                <h3 className="font-extrabold text-slate-900 text-base group-hover:text-sky-700 transition-colors">
+                  4 Rakat Salah →
+                </h3>
+                <p className="text-xs text-slate-600 mt-1">
+                  For Dhuhr, Asr, and Isha prayers.
+                </p>
+              </Link>
+            </div>
+          </div>
+
+          {/* Core Interactive Postures Lesson */}
+          <div>
+            <div className="mb-4">
+              <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                Foundational Master Lesson
+              </span>
+              <h2 className="text-2xl font-extrabold text-slate-900">
+                Master Standard Prayer Postures
+              </h2>
+            </div>
+            <InteractiveLessonViewer lesson={fullSalahOverviewLesson} />
           </div>
         </div>
       </Section>
