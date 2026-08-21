@@ -3,20 +3,20 @@
 @layer base {
   :root {
     --background: #fdfbf7;
-    --foreground: #1e293b;
-    --primary: #0f766e;
-    --primary-hover: #115e59;
-    --primary-light: #f0fdfa;
+    --foreground: #0f172a;
+    --primary: #047857;
+    --primary-hover: #065f46;
+    --primary-light: #ecfdf5;
     --secondary: #0284c7;
     --secondary-hover: #0369a1;
     --secondary-light: #f0f9ff;
-    --accent: #f59e0b;
-    --accent-light: #fef3c7;
-    --muted: #f1f5f9;
-    --muted-foreground: #64748b;
+    --accent: #d97706;
+    --accent-light: #fffbeb;
+    --muted: #f8fafc;
+    --muted-foreground: #475569;
     --border: #e2e8f0;
     --card: #ffffff;
-    --card-foreground: #1e293b;
+    --card-foreground: #0f172a;
   }
 
   body {
@@ -24,11 +24,19 @@
     color: var(--foreground);
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 
   .font-arabic {
     font-family: var(--font-arabic), "Amiri", "Traditional Arabic", "Scheherazade New", serif;
     direction: rtl;
     text-align: right;
+  }
+
+  /* Custom Focus States for Accessibility */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #047857;
+    outline-offset: 2px;
   }
 }

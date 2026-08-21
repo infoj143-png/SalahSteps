@@ -1,17 +1,17 @@
 export const siteConfig = {
-  name: "Kids Salah Learning",
-  title: "Kids Salah Learning — Teach Your Child How to Pray Salah & Wudu",
+  name: "SalahSteps",
+  title: "SalahSteps — Teach Your Child How to Pray Salah & Perform Wudu",
   description:
-    "A child-friendly, mobile-first educational guide helping parents teach their children Salah (Namaz) and Wudu with simple step-by-step illustrations, Arabic text, transliteration, and English explanations.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://kidssalah.com",
-  ogImage: "https://kidssalah.com/og.png",
+    "SalahSteps is a peaceful, mobile-first educational tool helping parents teach children how to pray Salah and perform Wudu with simple step-by-step visual guides, Arabic text, transliteration, and clear meanings.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://salahsteps.com",
+  ogImage: "https://salahsteps.com/og.png",
   mainNav: [
     { title: "Home", href: "/" },
-    { title: "Salah for Kids", href: "/salah-for-kids" },
-    { title: "Wudu Guide", href: "/wudu-for-kids" },
+    { title: "Learn Salah", href: "/salah-for-kids" },
+    { title: "Learn Wudu", href: "/wudu-for-kids" },
     { title: "What to Say", href: "/what-to-say-in-salah" },
-    { title: "Parent Resources", href: "/how-to-teach-kids-salah" },
-    { title: "Printables", href: "/salah-chart-for-kids" },
+    { title: "For Parents", href: "/how-to-teach-kids-salah" },
+    { title: "Resources", href: "/salah-chart-for-kids" },
   ],
   footerNav: {
     salahGuides: [

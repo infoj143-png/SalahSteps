@@ -13,11 +13,11 @@ export function ArabicTextBlock({
 
   return (
     <div
-      className={`p-4 my-2 rounded-xl bg-teal-50/50 border border-teal-100 text-center ${className}`}
+      className={`p-5 my-3 rounded-2xl bg-emerald-50/60 border border-emerald-100/80 text-center shadow-2xs ${className}`}
       dir="rtl"
       lang="ar"
     >
-      <p className="font-arabic text-2xl md:text-3xl lg:text-4xl leading-relaxed text-slate-800 font-bold tracking-wide">
+      <p className="font-arabic text-2xl sm:text-3xl lg:text-4xl leading-loose text-slate-900 font-bold tracking-wide">
         {arabicText}
       </p>
     </div>

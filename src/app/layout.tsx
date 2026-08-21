@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
-  authors: [{ name: "Kids Salah Learning Team" }],
-  creator: "Kids Salah Learning",
+  authors: [{ name: "SalahSteps Team" }],
+  creator: "SalahSteps",
   openGraph: {
     type: "website",
     locale: "en_US",

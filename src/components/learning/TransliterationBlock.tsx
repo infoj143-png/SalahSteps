@@ -14,15 +14,17 @@ export function TransliterationBlock({
   if (!transliteration && !translation) return null;
 
   return (
-    <div className={`space-y-2 text-center md:text-left ${className}`}>
+    <div className={`space-y-2.5 text-center md:text-left ${className}`}>
       {transliteration && (
-        <p className="text-base md:text-lg font-medium text-emerald-900 italic bg-emerald-50/50 px-3 py-1.5 rounded-lg inline-block">
-          &quot;{transliteration}&quot;
-        </p>
+        <div className="inline-block bg-teal-50/80 border border-teal-100/80 px-3.5 py-1.5 rounded-xl">
+          <p className="text-base md:text-lg font-semibold text-teal-950 italic">
+            &quot;{transliteration}&quot;
+          </p>
+        </div>
       )}
       {translation && (
-        <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-          <strong className="text-slate-700 font-semibold">Meaning:</strong> &quot;{translation}&quot;
+        <p className="text-sm md:text-base text-slate-700 leading-relaxed">
+          <strong className="text-slate-900 font-bold">Meaning:</strong> &quot;{translation}&quot;
         </p>
       )}
     </div>
