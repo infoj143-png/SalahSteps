@@ -30,6 +30,8 @@ export function constructMetadata({
         {
           url: image,
           alt: pageTitle,
+          width: 1200,
+          height: 630,
         },
       ],
       type: "website",
