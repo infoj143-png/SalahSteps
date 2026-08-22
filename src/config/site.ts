@@ -11,7 +11,7 @@ export const siteConfig = {
     { title: "Learn Wudu", href: "/wudu-for-kids" },
     { title: "What to Say", href: "/what-to-say-in-salah" },
     { title: "For Parents", href: "/how-to-teach-kids-salah" },
-    { title: "Resources", href: "/salah-chart-for-kids" },
+    { title: "Resources", href: "/resources" },
   ],
   footerNav: {
     salahGuides: [
@@ -24,11 +24,13 @@ export const siteConfig = {
     ],
     wuduAndPrintables: [
       { title: "Step-by-Step Wudu Guide", href: "/wudu-for-kids" },
+      { title: "All Learning Resources", href: "/resources" },
       { title: "Printable Salah Chart", href: "/salah-chart-for-kids" },
       { title: "Printable Wudu Chart", href: "/wudu-chart-for-kids" },
     ],
     parents: [
       { title: "How to Teach Kids Salah", href: "/how-to-teach-kids-salah" },
+      { title: "Parent Resources Hub", href: "/resources" },
     ],
   },
 };
