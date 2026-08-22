@@ -1,7 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { ResourceCard } from "./ResourceCard";
-import { ResourceItem } from "@/types/resources";
+import { ResourceItem, ResourceType } from "@/types/resources";
 
 interface PrintableResourceCardProps {
   title: string;
@@ -18,15 +17,13 @@ export function PrintableResourceCard({
   href,
   status = "available",
 }: PrintableResourceCardProps) {
-  const isAvailable = status === "available" && Boolean(href) && href !== "#";
-
   const syntheticResource: ResourceItem = {
     id: title.toLowerCase().replace(/[^a-z0-9]/g, "-"),
     slug: href ? href.replace(/^\//, "") : title.toLowerCase().replace(/[^a-z0-9]/g, "-"),
     title,
     description,
     category: "printable",
-    type: (format as any) || "Printable Chart",
+    type: (format as unknown as ResourceType) || "Printable Chart",
     audience: "Kids & Parents",
     status,
     isPrintable: true,

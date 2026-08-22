@@ -205,8 +205,7 @@ export const resourcesData: ResourceItem[] = [
     audience: "Kids & Parents",
     status: "coming-soon",
     isPrintable: true,
-    isDownloadable: true,
-    downloadUrl: "#",
+    isDownloadable: false,
     icon: "📦",
     tags: ["PDF Bundle", "High-Res Print", "Flashcards", "Poster"],
     details: {
@@ -235,8 +234,7 @@ export const resourcesData: ResourceItem[] = [
     audience: "Kids & Parents",
     status: "coming-soon",
     isPrintable: true,
-    isDownloadable: true,
-    downloadUrl: "#",
+    isDownloadable: false,
     icon: "🎓",
     tags: ["Certificate", "Reward", "Encouragement", "Printable"],
     details: {
