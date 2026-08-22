@@ -1,7 +1,9 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Section } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { PrintButton } from "@/components/ui/PrintButton";
 import { PrintableResourceCard } from "@/components/learning/PrintableResourceCard";
 import { constructMetadata } from "@/lib/seo";
 
@@ -26,24 +28,30 @@ export default function WuduChartForKidsPage() {
 
   return (
     <PageContainer>
-      <Section className="py-8 bg-sky-50/60 border-b border-sky-100/80">
-        <Breadcrumbs items={[{ label: "Wudu Chart for Kids" }]} />
-        <div className="max-w-3xl mt-2">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Printable Wudu Bathroom Poster
-          </h1>
-          <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
-            Display this step-by-step Wudu sequence poster near your bathroom sink to help children remember ablution steps easily.
-          </p>
+      {/* Top Header */}
+      <Section className="py-8 bg-sky-50/60 border-b border-sky-100/80 print:hidden">
+        <Breadcrumbs items={[{ label: "Resources", href: "/resources" }, { label: "Wudu Chart for Kids" }]} />
+        <div className="max-w-3xl mt-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Printable Wudu Bathroom Poster
+            </h1>
+            <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
+              Display this step-by-step Wudu sequence poster near your bathroom sink to help children remember ablution steps easily.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <PrintButton label="Print Poster Now 🖨️" />
+          </div>
         </div>
       </Section>
 
       {/* Online Previewable Poster */}
-      <Section background="default">
-        <div className="max-w-4xl mx-auto bg-white border-2 border-sky-200 rounded-3xl p-6 md:p-8 shadow-sm">
+      <Section background="default" className="print:p-0">
+        <div className="max-w-4xl mx-auto bg-white border-2 border-sky-200 rounded-3xl p-6 md:p-8 shadow-sm print:border-none print:shadow-none print:p-0">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b border-slate-200 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-sky-800 bg-sky-100/80 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-sky-800 bg-sky-100/80 px-3 py-1 rounded-full print:border print:border-sky-300">
                 SalahSteps Wudu Wall Guide
               </span>
               <h2 className="text-2xl font-bold text-slate-900 mt-2">
@@ -56,9 +64,9 @@ export default function WuduChartForKidsPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-6 print:grid-cols-4">
             {wuduSteps.map((step) => (
-              <div key={step.num} className="bg-sky-50/50 rounded-2xl p-4 border border-sky-100 text-center flex flex-col justify-between">
+              <div key={step.num} className="bg-sky-50/50 rounded-2xl p-4 border border-sky-100 text-center flex flex-col justify-between print:border-slate-300">
                 <div>
                   <span className="text-2xl block mb-2">{step.icon}</span>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-sky-800 bg-sky-100 px-2 py-0.5 rounded-full inline-block mb-1">
@@ -78,17 +86,22 @@ export default function WuduChartForKidsPage() {
       </Section>
 
       {/* Available Printables Cards */}
-      <Section background="muted">
+      <Section background="muted" className="print:hidden">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h2 className="text-2xl font-bold text-slate-900 text-center">
-            Printable Resources Status
-          </h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-slate-900">
+              More Printable Resources
+            </h2>
+            <Link href="/resources" className="text-xs font-bold text-emerald-700 hover:underline">
+              View All Resources →
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <PrintableResourceCard
-              title="Step-by-Step Wudu Poster"
-              description="Full visual step sequence layout ready to view or print from browser."
-              format="Web Poster"
-              href="/wudu-chart-for-kids"
+              title="Weekly Salah Progress Chart"
+              description="Full interactive weekly table layout ready to view or print."
+              format="Web Printable"
+              href="/salah-chart-for-kids"
               status="available"
             />
             <PrintableResourceCard

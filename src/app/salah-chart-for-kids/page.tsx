@@ -1,7 +1,9 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Section } from "@/components/layout/Section";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { PrintButton } from "@/components/ui/PrintButton";
 import { PrintableResourceCard } from "@/components/learning/PrintableResourceCard";
 import { constructMetadata } from "@/lib/seo";
 
@@ -18,24 +20,30 @@ export default function SalahChartForKidsPage() {
 
   return (
     <PageContainer>
-      <Section className="py-8 bg-amber-50/60 border-b border-amber-100/80">
-        <Breadcrumbs items={[{ label: "Salah Chart for Kids" }]} />
-        <div className="max-w-3xl mt-2">
-          <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Printable Salah Tracker Chart for Kids
-          </h1>
-          <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
-            Help your child build a joyful daily prayer habit with this easy weekly prayer tracker. You can view, bookmark, or print this page directly at home.
-          </p>
+      {/* Top Header */}
+      <Section className="py-8 bg-amber-50/60 border-b border-amber-100/80 print:hidden">
+        <Breadcrumbs items={[{ label: "Resources", href: "/resources" }, { label: "Salah Chart for Kids" }]} />
+        <div className="max-w-3xl mt-2 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Printable Salah Tracker Chart for Kids
+            </h1>
+            <p className="mt-3 text-base md:text-lg text-slate-600 leading-relaxed">
+              Help your child build a joyful daily prayer habit with this easy weekly prayer tracker. You can view, print, or hang this page directly at home.
+            </p>
+          </div>
+          <div className="shrink-0">
+            <PrintButton label="Print Chart Now 🖨️" />
+          </div>
         </div>
       </Section>
 
-      {/* Online Previewable Printable Chart */}
-      <Section background="default">
-        <div className="max-w-4xl mx-auto bg-white border-2 border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm">
+      {/* Online Previewable & Printable Chart */}
+      <Section background="default" className="print:p-0">
+        <div className="max-w-4xl mx-auto bg-white border-2 border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm print:border-none print:shadow-none print:p-0">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-6 border-b border-slate-200 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/80 px-3 py-1 rounded-full print:border print:border-emerald-300">
                 SalahSteps Weekly Tracker
               </span>
               <h2 className="text-2xl font-bold text-slate-900 mt-2">
@@ -81,17 +89,22 @@ export default function SalahChartForKidsPage() {
       </Section>
 
       {/* Available Printables Cards */}
-      <Section background="muted">
+      <Section background="muted" className="print:hidden">
         <div className="max-w-4xl mx-auto space-y-6">
-          <h2 className="text-2xl font-bold text-slate-900 text-center">
-            Printable Resources Status
-          </h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-slate-900">
+              More Printable Resources
+            </h2>
+            <Link href="/resources" className="text-xs font-bold text-emerald-700 hover:underline">
+              View All Resources →
+            </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <PrintableResourceCard
-              title="Weekly Salah Tracker Page"
-              description="Full interactive weekly table layout ready to view or print."
-              format="Web Printable"
-              href="/salah-chart-for-kids"
+              title="Step-by-Step Wudu Poster"
+              description="Visual bathroom poster layout with 8 essential steps ready to print."
+              format="Web Poster"
+              href="/wudu-chart-for-kids"
               status="available"
             />
             <PrintableResourceCard

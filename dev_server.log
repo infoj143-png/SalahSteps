@@ -1,0 +1,14 @@
+
+> kids-salah@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.2 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 525ms
+✓ Running next.config.ts took 42ms
+
+ HEAD / 200 in 3.1s (next.js: 2.7s, application-code: 394ms)
+ GET /resources 200 in 894ms (next.js: 679ms, application-code: 216ms)
+ GET /resources/salah-weekly-tracker 200 in 1228ms (next.js: 308ms, generate-params: 780ms, application-code: 140ms)
+ GET /how-to-teach-kids-salah 200 in 358ms (next.js: 243ms, application-code: 116ms)
