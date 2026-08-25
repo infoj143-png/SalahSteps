@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Amiri } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
@@ -16,6 +16,13 @@ const arabicFont = Amiri({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#059669",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -25,6 +32,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   authors: [{ name: "SalahSteps Team" }],
   creator: "SalahSteps",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "SalahSteps",
+  },
+  formatDetection: {
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
