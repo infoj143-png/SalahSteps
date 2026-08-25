@@ -1,14 +1,96 @@
-
-> kids-salah@0.1.0 dev
-> next dev
-
 ▲ Next.js 16.3.2 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.0.2:3000
-✓ Ready in 525ms
-✓ Running next.config.ts took 42ms
+✓ Ready in 570ms
+✓ Running next.config.ts took 49ms
 
- HEAD / 200 in 3.1s (next.js: 2.7s, application-code: 394ms)
- GET /resources 200 in 894ms (next.js: 679ms, application-code: 216ms)
- GET /resources/salah-weekly-tracker 200 in 1228ms (next.js: 308ms, generate-params: 780ms, application-code: 140ms)
- GET /how-to-teach-kids-salah 200 in 358ms (next.js: 243ms, application-code: 116ms)
+⨯ ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mStepOrderingGame[0m } [36mfrom[0m [32m"../src/components/StepOrderingGame"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mconst[0m sampleItems = [
+  [90m5 |[0m   { id: [32m"1"[0m, text: [32m"Wash hands three times"[0m, correctOrder: [35m1[0m },
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ GET /test-game 500 in 3.6s (next.js: 3.5s, application-code: 178ms)
+[browser] Uncaught Error: ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  1 | import React from "react";
+> 2 | import { StepOrderingGame } from "../src/components/StepOrderingGame";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const sampleItems = [
+  5 |   { id: "1", text: "Wash hands three times", correctOrder: 1 },
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/test-game/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/test-game/page.tsx:2:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  1 | import React from "react";
+> 2 | import { StepOrderingGame } from "../src/components/StepOrderingGame";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const sampleItems = [
+  5 |   { id: "1", text: "Wash hands three times", correctOrder: 1 },
+
+https://nextjs.org/docs/messages/module-not-found
+[browser] ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  1 | import React from "react";
+> 2 | import { StepOrderingGame } from "../src/components/StepOrderingGame";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const sampleItems = [
+  5 |   { id: "1", text: "Wash hands three times", correctOrder: 1 },
+
+https://nextjs.org/docs/messages/module-not-found
+[browser] ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  1 | import React from "react";
+> 2 | import { StepOrderingGame } from "../src/components/StepOrderingGame";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const sampleItems = [
+  5 |   { id: "1", text: "Wash hands three times", correctOrder: 1 },
+
+https://nextjs.org/docs/messages/module-not-found
+[browser] ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  1 | import React from "react";
+> 2 | import { StepOrderingGame } from "../src/components/StepOrderingGame";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | const sampleItems = [
+  5 |   { id: "1", text: "Wash hands three times", correctOrder: 1 },
+
+https://nextjs.org/docs/messages/module-not-found
+⨯ ./src/app/test-game/page.tsx:2:1
+Error: Module not found: Can't resolve '../src/components/StepOrderingGame'
+  [90m1 |[0m [36mimport[0m [33mReact[0m [36mfrom[0m [32m"react"[0m;
+[31m[1m>[0m [90m2 |[0m [36mimport[0m { [33mStepOrderingGame[0m } [36mfrom[0m [32m"../src/components/StepOrderingGame"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mconst[0m sampleItems = [
+  [90m5 |[0m   { id: [32m"1"[0m, text: [32m"Wash hands three times"[0m, correctOrder: [35m1[0m },
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ HEAD /test-game 500 in 37ms (next.js: 21ms, application-code: 16ms)
+✓ Compiled in 317ms
+ GET /test-game 200 in 645ms (next.js: 310ms, application-code: 334ms)
